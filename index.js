@@ -132,8 +132,8 @@ function printRow(Auto){
     }
 }
 
-function deleteR(Auto){
-    firebase.database().ref('Autos/' + Auto).set(null).then(() => {
+function deleteR(id){
+    firebase.database().ref('Autos/' + id).set(null).then(() => {
       read();
     }).then(()=>{
        swal("Listo!", "Eliminado correctamente", "success");
